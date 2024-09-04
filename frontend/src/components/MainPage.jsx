@@ -104,7 +104,7 @@ export default function PodcastGenerator() {
     setLoading(true);
     try {
       const parsedConversation = parseConversation(conversationText);
-      const response = await fetch('http://localhost:8080/conversation/synthesize-conversation', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/conversation/synthesize-conversation`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
