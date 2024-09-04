@@ -101,6 +101,7 @@ export default function PodcastGenerator() {
   };
 
   const handleSubmit = async () => {
+    console.log("process.env.REACT_APP_BACKEND_URL",process.env.REACT_APP_BACKEND_URL)
     setLoading(true);
     try {
       const parsedConversation = parseConversation(conversationText);
